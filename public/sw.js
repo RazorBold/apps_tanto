@@ -1,14 +1,15 @@
-const CACHE_NAME = 'solar-tracker-v1';
+const CACHE_NAME = 'solar-tracker-v2';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
   '/css/style.css',
-  '/js/utils.js',
-  '/js/auth.js',
-  '/js/dashboard.js',
-  '/js/installation.js',
-  '/js/analytics.js',
-  '/js/app.js',
+  '/js/utils.js?v=2',
+  '/js/auth.js?v=2',
+  '/js/dashboard.js?v=2',
+  '/js/installation.js?v=2',
+  '/js/analytics.js?v=2',
+  '/js/history.js?v=2',
+  '/js/app.js?v=2',
   '/manifest.json'
 ];
 
