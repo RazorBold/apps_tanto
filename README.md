@@ -65,22 +65,25 @@ EOF
 
 ## Jalankan dengan PM2
 
-```bash
-# Jalankan app
-pm2 start server.js --name solar-tracker -- --env production
+**Step 1** — Edit file `ecosystem.config.js`, ganti nilai `JWT_SECRET`:
 
-# Atau dengan environment variables dari file .env
-pm2 start server.js --name solar-tracker
+```js
+// ecosystem.config.js
+env: {
+  PORT: 5031,
+  DATA_DIR: '/data',
+  JWT_SECRET: 'GANTI_INI_DENGAN_STRING_ACAK'  // <-- ganti ini
+}
+```
+
+**Step 2** — Jalankan:
+
+```bash
+pm2 start ecosystem.config.js
 
 # Pastikan PM2 otomatis start saat VM reboot
 pm2 startup
 pm2 save
-```
-
-> Kalau PM2 tidak membaca .env otomatis, gunakan cara ini:
-
-```bash
-PORT=5031 DATA_DIR=/data JWT_SECRET=isi-secret-kamu pm2 start server.js --name solar-tracker
 ```
 
 ---
